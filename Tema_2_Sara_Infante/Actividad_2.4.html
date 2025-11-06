@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ejemplo de elementos semánticos</title>
+</head>
+<body>
+
+  <!-- Address: información de contacto -->
+  <address>
+    Curso de HTML — Profesor: María Pérez<br>
+    Correo: <a href="mailto:profesor@example.com">profesor@example.com</a><br>
+    Dirección: Calle Falsa 123, 28000 Madrid
+  </address>
+
+  <!-- Article: pieza independiente de contenido -->
+  <article>
+    <h1>La importancia de la semántica en HTML</h1>
+    <p>
+      La semántica ayuda a los navegadores y tecnologías asistivas a entender mejor la estructura de una página.
+      Usar etiquetas correctas mejora accesibilidad y SEO.
+    </p>
+    <footer>
+      <p>Publicado por: Departamento de Informática — 24 de octubre de 2025</p>
+    </footer>
+  </article>
+
+  <!-- Aside: contenido relacionado -->
+  <aside>
+    <h3>Relacionado</h3>
+    <p>Enlaces y recursos sobre buenas prácticas en HTML y accesibilidad.</p>
+    <ul>
+      <li><a href="https://developer.mozilla.org/">MDN Web Docs</a></li>
+      <li><a href="https://www.w3.org/">W3C</a></li>
+    </ul>
+  </aside>
+
+  <!-- Blockquote: cita -->
+  <blockquote cite="https://en.wikipedia.org/wiki/Tim_Berners-Lee">
+    "The Web does not just connect machines, it connects people." — Tim Berners-Lee
+  </blockquote>
+
+  <!-- Details: contenido expandible -->
+  <details>
+    <summary>Más información sobre etiquetas semánticas</summary>
+    <p>
+      Las etiquetas semánticas proporcionan significado al contenido. Ejemplos: &lt;article&gt;, &lt;aside&gt;, &lt;figure&gt;...
+    </p>
+  </details>
+
+  <!-- Dialog: cuadro de diálogo modal (requiere soporte del navegador) -->
+  <button id="openDialog">Abrir diálogo de ejemplo</button>
+  <dialog id="miDialog">
+    <p>Este es un diálogo. Puedes cerrarlo con el botón o fuera si el navegador lo permite.</p>
+    <menu>
+      <button id="cerrarDialog">Cerrar</button>
+    </menu>
+  </dialog>
+
+  <!-- dl, dt y dd: lista de definición -->
+  <section>
+    <h2>Glosario</h2>
+    <dl>
+      <dt>HTML</dt>
+      <dd>Lenguaje de marcado para estructurar páginas web.</dd>
+
+      <dt>Semántica</dt>
+      <dd>Uso de etiquetas que reflejan el significado del contenido.</dd>
+
+      <dt>Accesibilidad</dt>
+      <dd>Buenas prácticas para que las páginas sean usables por todo el mundo.</dd>
+    </dl>
+  </section>
+
+  <!-- figure y figcaption: imagen con pie de foto -->
+  <figure>
+    <img src="https://via.placeholder.com/300x180.png?text=Imagen+de+ejemplo" alt="Imagen de ejemplo" />
+    <figcaption>Figura 1: Imagen de ejemplo (placeholder).</figcaption>
+  </figure>
+
+  <!-- footer: pie de página global -->
+  <footer>
+    <p>&copy; 2025 — Curso de HTML. Hecho como ejercicio de prácticas.</p>
+  </footer>
+
+  <!-- Script para abrir/cerrar el dialog (funciona en navegadores modernos) -->
+  <script>
+    (function() {
+      var openBtn = document.getElementById('openDialog');
+      var dialog = document.getElementById('miDialog');
+      var closeBtn = document.getElementById('cerrarDialog');
+
+      if (!dialog) return;
+
+      openBtn.addEventListener('click', function() {
+        // showModal() si está disponible, si no, fallback a show() o simplemente open
+        if (typeof dialog.showModal === 'function') {
+          dialog.showModal();
+        } else {
+          dialog.setAttribute('open', '');
+        }
+      });
+
+      closeBtn.addEventListener('click', function() {
+        if (typeof dialog.close === 'function') {
+          dialog.close();
+        } else {
+          dialog.removeAttribute('open');
+        }
+      });
+
+      // Cerrar dialog si el usuario hace click fuera del contenido (opcional)
+      dialog.addEventListener('click', function(event) {
+        var rect = dialog.getBoundingClientRect();
+        var isInDialog = (
+          rect.top <= event.clientY && event.clientY <= rect.top + rect.height &&
+          rect.left <= event.clientX && event.clientX <= rect.left + rect.width
+        );
+        if (!isInDialog && typeof dialog.close === 'function') {
+          dialog.close();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
