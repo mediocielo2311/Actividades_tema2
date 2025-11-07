@@ -8,8 +8,7 @@
   <body>
     <address>
       Curso de HTML — Profesora: Hello Kitty<br />
-      Correo: <a href="hellokitty@mail.com">hellokitty@mail.com</a
-      ><br />
+      Correo: <a href="hellokitty@mail.com">hellokitty@mail.com</a><br />
       Dirección: Calle Falsa 123, 28000 Madrid
     </address>
 
@@ -21,9 +20,7 @@
         accesibilidad y SEO.
       </p>
       <footer>
-        <p>
-          Publicado por: Departamento semántico — 24 de octubre de 2025
-        </p>
+        <p>Publicado por: Departamento semántico — 24 de octubre de 2025</p>
       </footer>
     </article>
 
@@ -50,9 +47,7 @@
 
     <button id="openDialog">Abrir diálogo</button>
     <dialog id="miDialog">
-      <p>
-        Esto es un diálogo. Ciérralo con el botón.
-      </p>
+      <p>Esto es un diálogo. Ciérralo con el botón.</p>
       <menu>
         <button id="cerrarDialog">Cerrar</button>
       </menu>
@@ -61,25 +56,23 @@
     <section>
       <h2>Glosario</h2>
       <dl>
-        <dt>HTML</dt>
-        <dd>Lenguaje de marcado para estructurar páginas web.</dd>
+        <dt>Término 1</dt>
+        <dd>Esta sería la definición del término 1</dd>
 
-        <dt>Semántica</dt>
-        <dd>Uso de etiquetas que reflejan el significado del contenido.</dd>
+        <dt>Término 2</dt>
+        <dd>Esta sería la definición del término 2</dd>
 
-        <dt>Accesibilidad</dt>
-        <dd>
-          Buenas prácticas para que las páginas sean usables por todo el mundo.
-        </dd>
+        <dt>Término 3</dt>
+        <dd>Esta sería la definición del término 3</dd>
       </dl>
     </section>
 
     <figure>
       <img
-        src="https://via.placeholder.com/300x180.png?text=Imagen+de+ejemplo"
-        alt="Imagen de ejemplo"
+        src="images/hello-kitty01.jpg"
+        alt="La suprema"
       />
-      <figcaption>Figura 1: Imagen de ejemplo (placeholder).</figcaption>
+      <figcaption>Esta es Hello Kitty, la suprema</figcaption>
     </figure>
 
     <footer>
@@ -87,28 +80,16 @@
     </footer>
 
     <script>
-      (function () {
-        var openBtn = document.getElementById("openDialog");
-        var dialog = document.getElementById("miDialog");
-        var closeBtn = document.getElementById("cerrarDialog");
+      const openBtn = document.getElementById("openDialog");
+      const dialog = document.getElementById("miDialog");
+      const closeBtn = document.getElementById("cerrarDialog");
 
-        if (!dialog) return;
+      openBtn.addEventListener("click", () => {
+        dialog.showModal();
+      });
 
-        openBtn.addEventListener("click", function () {
-          if (typeof dialog.showModal === "function") {
-            dialog.showModal();
-          } else {
-            dialog.setAttribute("open", "");
-          }
-        });
-
-        closeBtn.addEventListener("click", function () {
-          if (typeof dialog.close === "function") {
-            dialog.close();
-          } else {
-            dialog.removeAttribute("open");
-          }
-        });
+      closeBtn.addEventListener("click", () => {
+        dialog.close();
       });
     </script>
   </body>
