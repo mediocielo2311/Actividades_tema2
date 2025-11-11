@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <h1>Formulario 1: Datos personales y selección de idioma y país.</h1>
+<details>
+  <summary>Formulario 1 ▼</summary>
+    <form action="#" method="post">
+  <fieldset>
+    <legend>Datos personales</legend>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required><br><br>
+
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required><br><br>
+
+    <label>Idioma:</label>
+    <input type="radio" id="ingles" name="idioma" value="ingles">
+    <label for="ingles">Inglés</label>
+    <input type="radio" id="espanol" name="idioma" value="espanol">
+    <label for="espanol">Español</label>
+    <input type="radio" id="frances" name="idioma" value="frances">
+    <label for="frances">Francés</label><br><br>
+
+    <label for="pais">País:</label>
+    <select id="pais" name="pais" required>
+      <option value="espana" selected>España</option>
+    </select><br><br>
+
+    <label>Género:</label>
+    <input type="radio" id="hombre" name="genero" value="hombre">
+    <label for="hombre">Hombre</label>
+    <input type="radio" id="mujer" name="genero" value="mujer">
+    <label for="mujer">Mujer</label><br><br>
+
+    <button type="submit">Enviar</button>
+  </fieldset>
+</form>
+</details>
+
+<h1>Formulario 2: Preferencias, fecha, selección de archivo, género y asignaturas.</h1>
+<details>
+  <summary>Formulario 2 ▼</summary>
+<form action="#" method="post">
+  <fieldset>
+    <legend>Indique sus preferencias por favor</legend>
+    
+    <label for="fecha1">Elija una fecha:</label>
+    <input type="date" id="fecha1" name="fecha1" required><br><br>
+    
+    <label for="archivo1">Elija un fichero:</label>
+    <input type="file" id="archivo1" name="archivo1"><br><br>
+
+    <label for="procesador">Procesador:</label>
+    <select id="procesador" name="procesador">
+      <option value="amd">AMD</option>
+      <option value="intel-i5">Intel i5</option>
+      <option value="intel-i7">Intel i7</option>
+    </select><br><br>
+
+    <label>Asignaturas:</label><br>
+    <input type="checkbox" id="matematicas" name="asignaturas" value="matematicas">
+    <label for="matematicas">Matemáticas</label><br>
+    <input type="checkbox" id="historia" name="asignaturas" value="historia">
+    <label for="historia">Historia</label><br>
+    <input type="checkbox" id="geografia" name="asignaturas" value="geografia">
+    <label for="geografia">Geografía</label><br>
+    <input type="checkbox" id="lengua" name="asignaturas" value="lengua">
+    <label for="lengua">Lengua</label><br><br>
+
+    <label for="nombre2">Nombre:</label>
+    <input type="text" id="nombre2" name="nombre2" required><br><br>
+
+    <label for="apellidos2">Apellidos:</label>
+    <input type="text" id="apellidos2" name="apellidos2" required><br><br>
+
+    <label for="direccion">Dirección:</label>
+    <input type="text" id="direccion" name="direccion"><br><br>
+
+    <label for="color">Elija un color:</label>
+    <input type="color" id="color" name="color"><br><br>
+
+    <label for="texto">Utilice este cuadro para escribir:</label><br>
+    <textarea id="texto" name="texto" rows="4" cols="40"></textarea><br><br>
+
+    <label>Género:</label>
+    <input type="radio" id="mujer2" name="genero2" value="mujer">
+    <label for="mujer2">Mujer</label>
+    <input type="radio" id="hombre2" name="genero2" value="hombre">
+    <label for="hombre2">Hombre</label><br><br>
+
+    <label for="fecha-nacimiento">Fecha nacimiento:</label>
+    <input type="date" id="fecha-nacimiento" name="fecha_nacimiento"><br><br>
+
+    <label for="hora">Elija una hora:</label>
+    <input type="time" id="hora" name="hora"><br><br>
+
+    <button type="submit">Enviar</button>
+  </fieldset>
+</form>
+</details>
+
+<h1>Formulario 3: Color y texto simple</h1>
+<details>
+  <summary>Formulario 3 ▼</summary>
+<form action="#" method="post">
+  <fieldset>
+    <legend>Formulario 3</legend>
+    <label for="color3">Elija un color:</label>
+    <input type="color" id="color3" name="color3"><br><br>
+
+    <label for="texto3">Escribe un texto:</label>
+    <input type="text" id="texto3" name="texto3"><br><br>
+
+    <button type="submit">Enviar</button>
+  </fieldset>
+</form>
+</details>
+
+<h1>Formulario 4: Opciones educativas y otros detalles</h1>
+<details>
+  <summary>Formulario 4 ▼</summary>
+<form action="#" method="post">
+  <fieldset>
+    <legend>Formulario 4</legend>
+
+    <label>Estudios:</label><br>
+    <input type="checkbox" id="java" name="estudios" value="java">
+    <label for="java">Java</label><br>
+    <input type="checkbox" id="asir" name="estudios" value="asir">
+    <label for="asir">ASIR</label><br>
+    <input type="checkbox" id="dam" name="estudios" value="dam">
+    <label for="dam">DAW</label><br>
+
+    <label for="fecha4">Elija una fecha:</label>
+    <input type="date" id="fecha4" name="fecha4"><br><br>
+
+    <label for="archivo4">Elija un fichero:</label>
+    <input type="file" id="archivo4" name="archivo4"><br><br>
+
+    <label>Asignaturas:</label><br>
+    <input type="checkbox" id="smira" name="asignaturas4" value="smira">
+    <label for="smira">SMIRA</label><br>
+
+    <label for="opciones">Rellene las opciones siguientes:</label><br>
+    <select id="opciones" name="opciones">
+      <option value="lenguaje_de_marcas">Lenguaje de marcas</option>
+      <option value="programacion">Programación</option>
+      <option value="desarrollo_interfaces">Desarrollo de interfaces</option>
+      <option value="redes">Redes</option>
+    </select><br><br>
+
+    <label for="editor">Editor favorito:</label><br>
+    <input type="radio" id="notepad" name="editor" value="notepad">
+    <label for="notepad">Notepad</label><br>
+    <input type="radio" id="sublime" name="editor" value="sublime">
+    <label for="sublime">Sublime</label><br>
+    <input type="radio" id="word" name="editor" value="word">
+    <label for="word">Word</label><br><br>
+
+    <label for="comentarios">Escriba aquí un texto:</label><br>
+    <textarea id="comentarios" name="comentarios" rows="4" cols="40"></textarea><br><br>
+
+    <label>Curso:</label><br>
+    <input type="checkbox" id="asir_curso" name="curso" value="asir">
+    <label for="asir_curso">ASIR</label><br>
+    <input type="checkbox" id="dam_curso" name="curso" value="dam">
+    <label for="dam_curso">DAM</label><br>
+    <input type="checkbox" id="daw_curso" name="curso" value="daw">
+    <label for="daw_curso">DAW</label><br><br>
+
+    <label>Procesador:</label><br>
+    <input type="checkbox" id="amd" name="procesador" value="amd">
+    <label for="amd">AMD</label><br><br>
+
+    <button type="submit">Enviar</button>
+  </fieldset>
+</form>
+</details>
+
+</body>
+</html>
